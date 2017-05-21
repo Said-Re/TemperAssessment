@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E83C9C638CACA92B42BB4D5 /* Pods_TemperAssessmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73AB82F0DCAC95C9E9E544C2 /* Pods_TemperAssessmentTests.framework */; };
+		6137793340EA589C0A24B2AE /* Pods_TemperAssessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E057F10D6DB2D76DD45801F /* Pods_TemperAssessment.framework */; };
 		6851559B1ED22E350072FBA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6851559A1ED22E350072FBA2 /* AppDelegate.swift */; };
 		6851559D1ED22E350072FBA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6851559C1ED22E350072FBA2 /* ViewController.swift */; };
 		685155A01ED22E350072FBA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6851559E1ED22E350072FBA2 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39EAAF9ABC9297902D533F95 /* Pods-TemperAssessmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemperAssessmentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TemperAssessmentTests/Pods-TemperAssessmentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E057F10D6DB2D76DD45801F /* Pods_TemperAssessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemperAssessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		685155971ED22E350072FBA2 /* TemperAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemperAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6851559A1ED22E350072FBA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6851559C1ED22E350072FBA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		685155AB1ED22E350072FBA2 /* TemperAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemperAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		685155AF1ED22E350072FBA2 /* TemperAssessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperAssessmentTests.swift; sourceTree = "<group>"; };
 		685155B11ED22E350072FBA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73AB82F0DCAC95C9E9E544C2 /* Pods_TemperAssessmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemperAssessmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C7102661121C550A7B58662 /* Pods-TemperAssessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemperAssessment.release.xcconfig"; path = "Pods/Target Support Files/Pods-TemperAssessment/Pods-TemperAssessment.release.xcconfig"; sourceTree = "<group>"; };
+		93F8B3E0E3E76CBA42BE4C7F /* Pods-TemperAssessmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemperAssessmentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TemperAssessmentTests/Pods-TemperAssessmentTests.release.xcconfig"; sourceTree = "<group>"; };
+		AA3CF7F3951FD85C0DE32188 /* Pods-TemperAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemperAssessment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TemperAssessment/Pods-TemperAssessment.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6137793340EA589C0A24B2AE /* Pods_TemperAssessment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E83C9C638CACA92B42BB4D5 /* Pods_TemperAssessmentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4ECD6A4787CB691B928D0633 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E057F10D6DB2D76DD45801F /* Pods_TemperAssessment.framework */,
+				73AB82F0DCAC95C9E9E544C2 /* Pods_TemperAssessmentTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6851558E1ED22E350072FBA2 = {
 			isa = PBXGroup;
 			children = (
 				685155991ED22E350072FBA2 /* TemperAssessment */,
 				685155AE1ED22E350072FBA2 /* TemperAssessmentTests */,
 				685155981ED22E350072FBA2 /* Products */,
+				F2A15DC918C70A311B3A5F50 /* Pods */,
+				4ECD6A4787CB691B928D0633 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +117,17 @@
 			path = TemperAssessmentTests;
 			sourceTree = "<group>";
 		};
+		F2A15DC918C70A311B3A5F50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA3CF7F3951FD85C0DE32188 /* Pods-TemperAssessment.debug.xcconfig */,
+				7C7102661121C550A7B58662 /* Pods-TemperAssessment.release.xcconfig */,
+				39EAAF9ABC9297902D533F95 /* Pods-TemperAssessmentTests.debug.xcconfig */,
+				93F8B3E0E3E76CBA42BE4C7F /* Pods-TemperAssessmentTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 685155B41ED22E350072FBA2 /* Build configuration list for PBXNativeTarget "TemperAssessment" */;
 			buildPhases = (
+				F0DDDFE918D04AF90FDE1699 /* [CP] Check Pods Manifest.lock */,
 				685155931ED22E350072FBA2 /* Sources */,
 				685155941ED22E350072FBA2 /* Frameworks */,
 				685155951ED22E350072FBA2 /* Resources */,
+				8050CF4B8DE62B833B3F83CB /* [CP] Embed Pods Frameworks */,
+				A283AC1EC4D0082947F3FA93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 685155B71ED22E350072FBA2 /* Build configuration list for PBXNativeTarget "TemperAssessmentTests" */;
 			buildPhases = (
+				776C517D19E65DAF5AF38C1B /* [CP] Check Pods Manifest.lock */,
 				685155A71ED22E350072FBA2 /* Sources */,
 				685155A81ED22E350072FBA2 /* Frameworks */,
 				685155A91ED22E350072FBA2 /* Resources */,
+				E09931F75E69DE50722E0F4C /* [CP] Embed Pods Frameworks */,
+				ADC813EC627E69D87B2AE728 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +231,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		776C517D19E65DAF5AF38C1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8050CF4B8DE62B833B3F83CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TemperAssessment/Pods-TemperAssessment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A283AC1EC4D0082947F3FA93 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TemperAssessment/Pods-TemperAssessment-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADC813EC627E69D87B2AE728 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TemperAssessmentTests/Pods-TemperAssessmentTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E09931F75E69DE50722E0F4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TemperAssessmentTests/Pods-TemperAssessmentTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0DDDFE918D04AF90FDE1699 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		685155931ED22E350072FBA2 /* Sources */ = {
@@ -339,6 +470,7 @@
 		};
 		685155B51ED22E350072FBA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA3CF7F3951FD85C0DE32188 /* Pods-TemperAssessment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TemperAssessment/Info.plist;
@@ -351,6 +483,7 @@
 		};
 		685155B61ED22E350072FBA2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C7102661121C550A7B58662 /* Pods-TemperAssessment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TemperAssessment/Info.plist;
@@ -363,6 +496,7 @@
 		};
 		685155B81ED22E350072FBA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39EAAF9ABC9297902D533F95 /* Pods-TemperAssessmentTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -377,6 +511,7 @@
 		};
 		685155B91ED22E350072FBA2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93F8B3E0E3E76CBA42BE4C7F /* Pods-TemperAssessmentTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
