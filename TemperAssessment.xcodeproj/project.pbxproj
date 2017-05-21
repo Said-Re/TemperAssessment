@@ -15,6 +15,11 @@
 		685155A21ED22E350072FBA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 685155A11ED22E350072FBA2 /* Assets.xcassets */; };
 		685155A51ED22E350072FBA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685155A31ED22E350072FBA2 /* LaunchScreen.storyboard */; };
 		685155B01ED22E350072FBA2 /* TemperAssessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685155AF1ED22E350072FBA2 /* TemperAssessmentTests.swift */; };
+		685155BB1ED22F110072FBA2 /* mock.json in Resources */ = {isa = PBXBuildFile; fileRef = 685155BA1ED22F110072FBA2 /* mock.json */; };
+		685155BE1ED22FFD0072FBA2 /* JobsListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685155BD1ED22FFD0072FBA2 /* JobsListCollectionViewController.swift */; };
+		685155C01ED2301F0072FBA2 /* JobsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685155BF1ED2301F0072FBA2 /* JobsListViewModel.swift */; };
+		685155C21ED2303D0072FBA2 /* JobListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685155C11ED2303D0072FBA2 /* JobListStyle.swift */; };
+		685155C51ED230C70072FBA2 /* Componentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685155C41ED230C70072FBA2 /* Componentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,11 @@
 		685155AB1ED22E350072FBA2 /* TemperAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemperAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		685155AF1ED22E350072FBA2 /* TemperAssessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperAssessmentTests.swift; sourceTree = "<group>"; };
 		685155B11ED22E350072FBA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		685155BA1ED22F110072FBA2 /* mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = mock.json; path = ../../../Downloads/mock.json; sourceTree = "<group>"; };
+		685155BD1ED22FFD0072FBA2 /* JobsListCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobsListCollectionViewController.swift; path = JobsList/JobsListCollectionViewController.swift; sourceTree = "<group>"; };
+		685155BF1ED2301F0072FBA2 /* JobsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobsListViewModel.swift; path = JobsList/JobsListViewModel.swift; sourceTree = "<group>"; };
+		685155C11ED2303D0072FBA2 /* JobListStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobListStyle.swift; path = JobsList/JobListStyle.swift; sourceTree = "<group>"; };
+		685155C41ED230C70072FBA2 /* Componentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Componentable.swift; path = Generic/Componentable.swift; sourceTree = "<group>"; };
 		73AB82F0DCAC95C9E9E544C2 /* Pods_TemperAssessmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemperAssessmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C7102661121C550A7B58662 /* Pods-TemperAssessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemperAssessment.release.xcconfig"; path = "Pods/Target Support Files/Pods-TemperAssessment/Pods-TemperAssessment.release.xcconfig"; sourceTree = "<group>"; };
 		93F8B3E0E3E76CBA42BE4C7F /* Pods-TemperAssessmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemperAssessmentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TemperAssessmentTests/Pods-TemperAssessmentTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +108,9 @@
 		685155991ED22E350072FBA2 /* TemperAssessment */ = {
 			isa = PBXGroup;
 			children = (
+				685155C31ED230890072FBA2 /* Generic */,
+				685155BC1ED22FD70072FBA2 /* JobsList */,
+				685155BA1ED22F110072FBA2 /* mock.json */,
 				6851559A1ED22E350072FBA2 /* AppDelegate.swift */,
 				6851559C1ED22E350072FBA2 /* ViewController.swift */,
 				6851559E1ED22E350072FBA2 /* Main.storyboard */,
@@ -115,6 +128,24 @@
 				685155B11ED22E350072FBA2 /* Info.plist */,
 			);
 			path = TemperAssessmentTests;
+			sourceTree = "<group>";
+		};
+		685155BC1ED22FD70072FBA2 /* JobsList */ = {
+			isa = PBXGroup;
+			children = (
+				685155BD1ED22FFD0072FBA2 /* JobsListCollectionViewController.swift */,
+				685155BF1ED2301F0072FBA2 /* JobsListViewModel.swift */,
+				685155C11ED2303D0072FBA2 /* JobListStyle.swift */,
+			);
+			name = JobsList;
+			sourceTree = "<group>";
+		};
+		685155C31ED230890072FBA2 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				685155C41ED230C70072FBA2 /* Componentable.swift */,
+			);
+			name = Generic;
 			sourceTree = "<group>";
 		};
 		F2A15DC918C70A311B3A5F50 /* Pods */ = {
@@ -220,6 +251,7 @@
 				685155A51ED22E350072FBA2 /* LaunchScreen.storyboard in Resources */,
 				685155A21ED22E350072FBA2 /* Assets.xcassets in Resources */,
 				685155A01ED22E350072FBA2 /* Main.storyboard in Resources */,
+				685155BB1ED22F110072FBA2 /* mock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +362,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				685155C01ED2301F0072FBA2 /* JobsListViewModel.swift in Sources */,
+				685155C51ED230C70072FBA2 /* Componentable.swift in Sources */,
 				6851559D1ED22E350072FBA2 /* ViewController.swift in Sources */,
+				685155C21ED2303D0072FBA2 /* JobListStyle.swift in Sources */,
+				685155BE1ED22FFD0072FBA2 /* JobsListCollectionViewController.swift in Sources */,
 				6851559B1ED22E350072FBA2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +579,7 @@
 				685155B61ED22E350072FBA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		685155B71ED22E350072FBA2 /* Build configuration list for PBXNativeTarget "TemperAssessmentTests" */ = {
 			isa = XCConfigurationList;
@@ -551,6 +588,7 @@
 				685155B91ED22E350072FBA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
