@@ -9,17 +9,28 @@
 /* Begin PBXBuildFile section */
 		5E83C9C638CACA92B42BB4D5 /* Pods_TemperAssessmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73AB82F0DCAC95C9E9E544C2 /* Pods_TemperAssessmentTests.framework */; };
 		6137793340EA589C0A24B2AE /* Pods_TemperAssessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E057F10D6DB2D76DD45801F /* Pods_TemperAssessment.framework */; };
+		681DC8D91ED36F5A00CA986A /* JobsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681DC8D81ED36F5A00CA986A /* JobsList.storyboard */; };
+		681DC8DC1ED3700500CA986A /* JobsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681DC8DB1ED3700500CA986A /* JobsListCell.swift */; };
+		681DC8DE1ED3708F00CA986A /* JobsListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681DC8DD1ED3708F00CA986A /* JobsListCellViewModel.swift */; };
+		681DC8E01ED370E200CA986A /* JobsListCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681DC8DF1ED370E200CA986A /* JobsListCellStyle.swift */; };
+		681DC8E41ED381F700CA986A /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681DC8E31ED381F700CA986A /* JobModel.swift */; };
+		681DC8E71ED39EBE00CA986A /* DayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681DC8E61ED39EBE00CA986A /* DayListViewController.swift */; };
+		681DC8E91ED39ED800CA986A /* DayList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681DC8E81ED39ED800CA986A /* DayList.storyboard */; };
+		681DC8EB1ED39EF700CA986A /* DayListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681DC8EA1ED39EF700CA986A /* DayListViewModel.swift */; };
+		681DC8ED1ED39F0B00CA986A /* DayListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681DC8EC1ED39F0B00CA986A /* DayListStyle.swift */; };
+		681DC8F01ED39F3F00CA986A /* DayListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681DC8EF1ED39F3F00CA986A /* DayListCell.swift */; };
 		6851559B1ED22E350072FBA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6851559A1ED22E350072FBA2 /* AppDelegate.swift */; };
-		6851559D1ED22E350072FBA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6851559C1ED22E350072FBA2 /* ViewController.swift */; };
-		685155A01ED22E350072FBA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6851559E1ED22E350072FBA2 /* Main.storyboard */; };
 		685155A21ED22E350072FBA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 685155A11ED22E350072FBA2 /* Assets.xcassets */; };
 		685155A51ED22E350072FBA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685155A31ED22E350072FBA2 /* LaunchScreen.storyboard */; };
 		685155B01ED22E350072FBA2 /* TemperAssessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685155AF1ED22E350072FBA2 /* TemperAssessmentTests.swift */; };
 		685155BB1ED22F110072FBA2 /* mock.json in Resources */ = {isa = PBXBuildFile; fileRef = 685155BA1ED22F110072FBA2 /* mock.json */; };
-		685155BE1ED22FFD0072FBA2 /* JobsListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685155BD1ED22FFD0072FBA2 /* JobsListCollectionViewController.swift */; };
+		685155BE1ED22FFD0072FBA2 /* JobsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685155BD1ED22FFD0072FBA2 /* JobsListViewController.swift */; };
 		685155C01ED2301F0072FBA2 /* JobsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685155BF1ED2301F0072FBA2 /* JobsListViewModel.swift */; };
 		685155C21ED2303D0072FBA2 /* JobListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685155C11ED2303D0072FBA2 /* JobListStyle.swift */; };
 		685155C51ED230C70072FBA2 /* Componentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685155C41ED230C70072FBA2 /* Componentable.swift */; };
+		68718DD11ED4D16C00276FF5 /* DayListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68718DD01ED4D16C00276FF5 /* DayListCellViewModel.swift */; };
+		68718DD31ED4D18800276FF5 /* DayListCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68718DD21ED4D18800276FF5 /* DayListCellStyle.swift */; };
+		68718DD51ED4D2B800276FF5 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68718DD41ED4D2B800276FF5 /* DayModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +46,18 @@
 /* Begin PBXFileReference section */
 		39EAAF9ABC9297902D533F95 /* Pods-TemperAssessmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemperAssessmentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TemperAssessmentTests/Pods-TemperAssessmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E057F10D6DB2D76DD45801F /* Pods_TemperAssessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemperAssessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		681DC8D81ED36F5A00CA986A /* JobsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = JobsList.storyboard; path = JobsList/JobsList.storyboard; sourceTree = "<group>"; };
+		681DC8DB1ED3700500CA986A /* JobsListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobsListCell.swift; path = JobsList/Cells/JobsListCell.swift; sourceTree = "<group>"; };
+		681DC8DD1ED3708F00CA986A /* JobsListCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobsListCellViewModel.swift; path = JobsList/Cells/JobsListCellViewModel.swift; sourceTree = "<group>"; };
+		681DC8DF1ED370E200CA986A /* JobsListCellStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobsListCellStyle.swift; path = JobsList/Cells/JobsListCellStyle.swift; sourceTree = "<group>"; };
+		681DC8E31ED381F700CA986A /* JobModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobModel.swift; path = Model/JobModel.swift; sourceTree = "<group>"; };
+		681DC8E61ED39EBE00CA986A /* DayListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayListViewController.swift; path = JobsList/DayList/DayListViewController.swift; sourceTree = "<group>"; };
+		681DC8E81ED39ED800CA986A /* DayList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DayList.storyboard; path = JobsList/DayList/DayList.storyboard; sourceTree = "<group>"; };
+		681DC8EA1ED39EF700CA986A /* DayListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayListViewModel.swift; path = JobsList/DayList/DayListViewModel.swift; sourceTree = "<group>"; };
+		681DC8EC1ED39F0B00CA986A /* DayListStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayListStyle.swift; path = JobsList/DayList/DayListStyle.swift; sourceTree = "<group>"; };
+		681DC8EF1ED39F3F00CA986A /* DayListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayListCell.swift; path = JobsList/DayList/Cells/DayListCell.swift; sourceTree = "<group>"; };
 		685155971ED22E350072FBA2 /* TemperAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemperAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6851559A1ED22E350072FBA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6851559C1ED22E350072FBA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6851559F1ED22E350072FBA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		685155A11ED22E350072FBA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		685155A41ED22E350072FBA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		685155A61ED22E350072FBA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,10 +65,13 @@
 		685155AF1ED22E350072FBA2 /* TemperAssessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperAssessmentTests.swift; sourceTree = "<group>"; };
 		685155B11ED22E350072FBA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		685155BA1ED22F110072FBA2 /* mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = mock.json; path = ../../../Downloads/mock.json; sourceTree = "<group>"; };
-		685155BD1ED22FFD0072FBA2 /* JobsListCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobsListCollectionViewController.swift; path = JobsList/JobsListCollectionViewController.swift; sourceTree = "<group>"; };
+		685155BD1ED22FFD0072FBA2 /* JobsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobsListViewController.swift; path = JobsList/JobsListViewController.swift; sourceTree = "<group>"; };
 		685155BF1ED2301F0072FBA2 /* JobsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobsListViewModel.swift; path = JobsList/JobsListViewModel.swift; sourceTree = "<group>"; };
 		685155C11ED2303D0072FBA2 /* JobListStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobListStyle.swift; path = JobsList/JobListStyle.swift; sourceTree = "<group>"; };
 		685155C41ED230C70072FBA2 /* Componentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Componentable.swift; path = Generic/Componentable.swift; sourceTree = "<group>"; };
+		68718DD01ED4D16C00276FF5 /* DayListCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayListCellViewModel.swift; path = JobsList/DayList/Cells/DayListCellViewModel.swift; sourceTree = "<group>"; };
+		68718DD21ED4D18800276FF5 /* DayListCellStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayListCellStyle.swift; path = JobsList/DayList/Cells/DayListCellStyle.swift; sourceTree = "<group>"; };
+		68718DD41ED4D2B800276FF5 /* DayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayModel.swift; path = Model/DayModel.swift; sourceTree = "<group>"; };
 		73AB82F0DCAC95C9E9E544C2 /* Pods_TemperAssessmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemperAssessmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C7102661121C550A7B58662 /* Pods-TemperAssessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemperAssessment.release.xcconfig"; path = "Pods/Target Support Files/Pods-TemperAssessment/Pods-TemperAssessment.release.xcconfig"; sourceTree = "<group>"; };
 		93F8B3E0E3E76CBA42BE4C7F /* Pods-TemperAssessmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemperAssessmentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TemperAssessmentTests/Pods-TemperAssessmentTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +107,54 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		681DC8DA1ED36FCC00CA986A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				681DC8DB1ED3700500CA986A /* JobsListCell.swift */,
+				681DC8DD1ED3708F00CA986A /* JobsListCellViewModel.swift */,
+				681DC8DF1ED370E200CA986A /* JobsListCellStyle.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		681DC8E11ED381BA00CA986A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		681DC8E21ED381C200CA986A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				681DC8E31ED381F700CA986A /* JobModel.swift */,
+				68718DD41ED4D2B800276FF5 /* DayModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		681DC8E51ED39E7200CA986A /* DayList */ = {
+			isa = PBXGroup;
+			children = (
+				681DC8EE1ED39F1600CA986A /* Cells */,
+				681DC8E61ED39EBE00CA986A /* DayListViewController.swift */,
+				681DC8E81ED39ED800CA986A /* DayList.storyboard */,
+				681DC8EA1ED39EF700CA986A /* DayListViewModel.swift */,
+				681DC8EC1ED39F0B00CA986A /* DayListStyle.swift */,
+			);
+			name = DayList;
+			sourceTree = "<group>";
+		};
+		681DC8EE1ED39F1600CA986A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				681DC8EF1ED39F3F00CA986A /* DayListCell.swift */,
+				68718DD01ED4D16C00276FF5 /* DayListCellViewModel.swift */,
+				68718DD21ED4D18800276FF5 /* DayListCellStyle.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		6851558E1ED22E350072FBA2 = {
 			isa = PBXGroup;
 			children = (
@@ -108,12 +178,12 @@
 		685155991ED22E350072FBA2 /* TemperAssessment */ = {
 			isa = PBXGroup;
 			children = (
+				681DC8E21ED381C200CA986A /* Model */,
+				681DC8E11ED381BA00CA986A /* Manager */,
 				685155C31ED230890072FBA2 /* Generic */,
 				685155BC1ED22FD70072FBA2 /* JobsList */,
 				685155BA1ED22F110072FBA2 /* mock.json */,
 				6851559A1ED22E350072FBA2 /* AppDelegate.swift */,
-				6851559C1ED22E350072FBA2 /* ViewController.swift */,
-				6851559E1ED22E350072FBA2 /* Main.storyboard */,
 				685155A11ED22E350072FBA2 /* Assets.xcassets */,
 				685155A31ED22E350072FBA2 /* LaunchScreen.storyboard */,
 				685155A61ED22E350072FBA2 /* Info.plist */,
@@ -133,9 +203,12 @@
 		685155BC1ED22FD70072FBA2 /* JobsList */ = {
 			isa = PBXGroup;
 			children = (
-				685155BD1ED22FFD0072FBA2 /* JobsListCollectionViewController.swift */,
+				681DC8E51ED39E7200CA986A /* DayList */,
+				681DC8DA1ED36FCC00CA986A /* Cells */,
+				685155BD1ED22FFD0072FBA2 /* JobsListViewController.swift */,
 				685155BF1ED2301F0072FBA2 /* JobsListViewModel.swift */,
 				685155C11ED2303D0072FBA2 /* JobListStyle.swift */,
+				681DC8D81ED36F5A00CA986A /* JobsList.storyboard */,
 			);
 			name = JobsList;
 			sourceTree = "<group>";
@@ -249,9 +322,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				685155A51ED22E350072FBA2 /* LaunchScreen.storyboard in Resources */,
+				681DC8E91ED39ED800CA986A /* DayList.storyboard in Resources */,
 				685155A21ED22E350072FBA2 /* Assets.xcassets in Resources */,
-				685155A01ED22E350072FBA2 /* Main.storyboard in Resources */,
 				685155BB1ED22F110072FBA2 /* mock.json in Resources */,
+				681DC8D91ED36F5A00CA986A /* JobsList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,12 +436,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				681DC8DC1ED3700500CA986A /* JobsListCell.swift in Sources */,
+				681DC8E41ED381F700CA986A /* JobModel.swift in Sources */,
 				685155C01ED2301F0072FBA2 /* JobsListViewModel.swift in Sources */,
 				685155C51ED230C70072FBA2 /* Componentable.swift in Sources */,
-				6851559D1ED22E350072FBA2 /* ViewController.swift in Sources */,
+				68718DD51ED4D2B800276FF5 /* DayModel.swift in Sources */,
+				68718DD11ED4D16C00276FF5 /* DayListCellViewModel.swift in Sources */,
+				681DC8E01ED370E200CA986A /* JobsListCellStyle.swift in Sources */,
+				681DC8DE1ED3708F00CA986A /* JobsListCellViewModel.swift in Sources */,
+				681DC8EB1ED39EF700CA986A /* DayListViewModel.swift in Sources */,
 				685155C21ED2303D0072FBA2 /* JobListStyle.swift in Sources */,
-				685155BE1ED22FFD0072FBA2 /* JobsListCollectionViewController.swift in Sources */,
+				685155BE1ED22FFD0072FBA2 /* JobsListViewController.swift in Sources */,
+				681DC8E71ED39EBE00CA986A /* DayListViewController.swift in Sources */,
+				68718DD31ED4D18800276FF5 /* DayListCellStyle.swift in Sources */,
+				681DC8F01ED39F3F00CA986A /* DayListCell.swift in Sources */,
 				6851559B1ED22E350072FBA2 /* AppDelegate.swift in Sources */,
+				681DC8ED1ED39F0B00CA986A /* DayListStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,14 +474,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6851559E1ED22E350072FBA2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6851559F1ED22E350072FBA2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		685155A31ED22E350072FBA2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

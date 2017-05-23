@@ -7,7 +7,50 @@
 //
 
 import UIKit
+import ReactiveKit
 
-open class JobsListViewModel: NSObject {
+public protocol JobsListViewModelProtocol: ViewModelType {
+    
+    var jobList: [JobModel] { get set }
+    var didUpdateContent: PublishSubject1<Void> { get }
+    var disposeBag: DisposeBag { get }
+    
+    func updatedJobList(jobList: [JobModel])
+    func numberOfSections() -> Int
+    func numberOfItemsInSection(_ section: Int) -> Int
+    func didSelectItemAt(indexPath: IndexPath)
+    func viewModelForCell(_ indexPath: IndexPath) -> JobsListCellViewModelProtocol
+}
+
+open class JobsListViewModel: JobsListViewModelProtocol {
+    
+    open var jobList: [JobModel]
+    open var didUpdateContent = PublishSubject1<Void>()
+    open var disposeBag: DisposeBag = DisposeBag()
+    
+    public init(jobList: [JobModel]) {
+        self.jobList = jobList
+    }
+    
+    open func updatedJobList(jobList: [JobModel]) {
+        self.jobList = jobList
+        didUpdateContent.next()
+    }
+    
+    open func numberOfSections() -> Int {
+        return 1
+    }
+    
+    open func numberOfItemsInSection(_ section: Int) -> Int {
+        return jobList.count
+    }
+    
+    open func didSelectItemAt(indexPath: IndexPath) {
+    
+    }
+    
+    open func viewModelForCell(_ indexPath: IndexPath) -> JobsListCellViewModelProtocol {
+        return JobsListCellViewModel(jobModel: jobList[indexPath.row])
+    }
 
 }
