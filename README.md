@@ -1,2 +1,2 @@
 # TemperAssessment
-Run pod update
+pod install is requiered 
