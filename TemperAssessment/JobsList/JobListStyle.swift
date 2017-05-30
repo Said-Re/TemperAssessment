@@ -9,5 +9,19 @@
 import UIKit
 
 open class JobListStyle: StyleType {
-
+    
+    open var jobListCellStyle = JobsListCellStyle()
+    
+    open var titleLabelTextColor: UIColor = .black
+    open var titleLabelFont: UIFont = UIFont(name: "ArialMT", size: 28)!
+    
+    open var alwaysLabelTextColor: UIColor = .black
+    open var alwaysLabelFont: UIFont = UIFont(name: "Arial-BoldMT", size: 28)!
+    
+    open var shiftsNearLabelTextColor: UIColor = .black
+    open var shiftsNearLabelFont: UIFont = UIFont(name: "ArialMT", size: 21)!
+    
+    open var openPositionsLabelTextColor: UIColor = .black
+    open var openPositionsLabelFont: UIFont = UIFont(name: "ArialMT", size: 18)!
+    
 }

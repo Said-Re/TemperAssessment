@@ -17,6 +17,6 @@ open class DayListCellViewModel: DayListCellViewModelProtocol {
     open var day: String
     
     public init(day: DayModel) {
-        self.day = day.day
+        self.day = Date.getStringFormattedDate(dateString: day.day)
     }
 }

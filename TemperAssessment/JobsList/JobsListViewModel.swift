@@ -16,6 +16,7 @@ public protocol JobsListViewModelProtocol: ViewModelType {
     var disposeBag: DisposeBag { get }
     
     func updatedJobList(jobList: [JobModel])
+    func numberOfShifts() -> Int
     func numberOfSections() -> Int
     func numberOfItemsInSection(_ section: Int) -> Int
     func didSelectItemAt(indexPath: IndexPath)
@@ -35,6 +36,17 @@ open class JobsListViewModel: JobsListViewModelProtocol {
     open func updatedJobList(jobList: [JobModel]) {
         self.jobList = jobList
         didUpdateContent.next()
+    }
+    
+    open func numberOfShifts() -> Int {
+        
+        var totalShifts = 0
+        
+        for jobModel in jobList {
+            totalShifts += jobModel.shifts.count
+        }
+        
+        return totalShifts
     }
     
     open func numberOfSections() -> Int {

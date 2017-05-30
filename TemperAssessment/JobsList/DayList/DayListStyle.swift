@@ -9,5 +9,7 @@
 import UIKit
 
 open class DayListStyle: StyleType {
+    
+    open var dayListCellStyle = DayListCellStyle()
 
 }

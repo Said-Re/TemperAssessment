@@ -29,6 +29,9 @@ open class DayListViewController: UIViewController, UICollectionViewDelegate, UI
         
         let collectionViewFrame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 60)
         
+
+        layout.headerReferenceSize = CGSize(width: 80, height: 60)
+        
         collectionView = UICollectionView(frame: collectionViewFrame, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -57,6 +60,7 @@ open class DayListViewController: UIViewController, UICollectionViewDelegate, UI
         let cell: DayListCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! DayListCell
         
         cell.viewModel = viewModel.viewModelForCell(indexPath)
+        cell.style = style.dayListCellStyle
         
     
         // Configure the cell

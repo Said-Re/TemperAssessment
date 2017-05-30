@@ -9,5 +9,10 @@
 import UIKit
 
 open class DayListCellStyle: StyleType {
+    
+    open var dayLabelTextColor: UIColor = .white
+    open var dayLabelLabelFont: UIFont = UIFont(name: "ArialMT", size: 15)!
+    
+    open var cellBackground: UIColor = .purple
 
 }

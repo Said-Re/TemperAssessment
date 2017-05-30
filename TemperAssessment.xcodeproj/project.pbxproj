@@ -19,6 +19,7 @@
 		681DC8EB1ED39EF700CA986A /* DayListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681DC8EA1ED39EF700CA986A /* DayListViewModel.swift */; };
 		681DC8ED1ED39F0B00CA986A /* DayListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681DC8EC1ED39F0B00CA986A /* DayListStyle.swift */; };
 		681DC8F01ED39F3F00CA986A /* DayListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681DC8EF1ED39F3F00CA986A /* DayListCell.swift */; };
+		6849FA3C1EDDFEF4004263A2 /* Date+Temper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849FA3B1EDDFEF4004263A2 /* Date+Temper.swift */; };
 		6851559B1ED22E350072FBA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6851559A1ED22E350072FBA2 /* AppDelegate.swift */; };
 		685155A21ED22E350072FBA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 685155A11ED22E350072FBA2 /* Assets.xcassets */; };
 		685155A51ED22E350072FBA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685155A31ED22E350072FBA2 /* LaunchScreen.storyboard */; };
@@ -56,6 +57,7 @@
 		681DC8EA1ED39EF700CA986A /* DayListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayListViewModel.swift; path = JobsList/DayList/DayListViewModel.swift; sourceTree = "<group>"; };
 		681DC8EC1ED39F0B00CA986A /* DayListStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayListStyle.swift; path = JobsList/DayList/DayListStyle.swift; sourceTree = "<group>"; };
 		681DC8EF1ED39F3F00CA986A /* DayListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayListCell.swift; path = JobsList/DayList/Cells/DayListCell.swift; sourceTree = "<group>"; };
+		6849FA3B1EDDFEF4004263A2 /* Date+Temper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+Temper.swift"; path = "Generic/Date+Temper.swift"; sourceTree = "<group>"; };
 		685155971ED22E350072FBA2 /* TemperAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemperAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6851559A1ED22E350072FBA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		685155A11ED22E350072FBA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				685155C41ED230C70072FBA2 /* Componentable.swift */,
+				6849FA3B1EDDFEF4004263A2 /* Date+Temper.swift */,
 			);
 			name = Generic;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				681DC8DC1ED3700500CA986A /* JobsListCell.swift in Sources */,
 				681DC8E41ED381F700CA986A /* JobModel.swift in Sources */,
 				685155C01ED2301F0072FBA2 /* JobsListViewModel.swift in Sources */,
+				6849FA3C1EDDFEF4004263A2 /* Date+Temper.swift in Sources */,
 				685155C51ED230C70072FBA2 /* Componentable.swift in Sources */,
 				68718DD51ED4D2B800276FF5 /* DayModel.swift in Sources */,
 				68718DD11ED4D16C00276FF5 /* DayListCellViewModel.swift in Sources */,

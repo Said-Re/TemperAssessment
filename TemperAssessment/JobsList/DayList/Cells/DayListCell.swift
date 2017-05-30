@@ -23,7 +23,10 @@ class DayListCell: UICollectionViewCell {
     open var style: DayListCellStyle? {
         didSet {
             if let style = style {
+                dayLabel.textColor = style.dayLabelTextColor
+                dayLabel.font = style.dayLabelLabelFont
                 
+                backgroundColor = style.cellBackground
             }
         }
         
