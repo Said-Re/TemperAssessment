@@ -28,25 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         dayList.append(DayModel(dictionary: dictionary))
                     }
                     
-                    self.window = UIWindow(frame: UIScreen.main.bounds)
-                    self.window?.makeKeyAndVisible()
+                    let sortedDayList = dayList.sorted(by: { (current, previous) -> Bool in
+                        return previous.day > current.day
+                    })
                     
-                    // adding default root view controller
-                    let rootViewController = UIViewController()
-                    rootViewController.view.backgroundColor = UIColor.clear
-                    
-                    let dayListViewModel = DayListViewModel(dayList: dayList)
-                    let dayListViewController: DayListViewController = DayListViewController.create(viewModel: dayListViewModel, style: DayListStyle())
-                    
-                    let jobListViewModel = JobsListViewModel(jobList: dayList.count > 0 ? dayList[0].jobList : [])
-                    let jobListViewController: JobsListViewController = JobsListViewController.create(viewModel: jobListViewModel, style: JobListStyle())
-                    jobListViewController.dayListComponent = dayListViewController
-                    
-                    dayListViewModel.didSelectDay.observeNext { jobs in
-                        jobListViewModel.updatedJobList(jobList: jobs)
-                    }.dispose(in: dayListViewModel.disposeBag)
-                    
-                    window?.rootViewController = jobListViewController
+                    setUpComponents(dayList: sortedDayList)
                 
                 } else {
                     print("JSON is invalid")
@@ -58,9 +44,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(error.localizedDescription)
         }
         
-        
-        
         return true
+    }
+    
+    func setUpComponents(dayList: [DayModel]) {
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.makeKeyAndVisible()
+        
+        let rootViewController = UIViewController()
+        rootViewController.view.backgroundColor = UIColor.clear
+        
+        let dayListViewModel = DayListViewModel(dayList: dayList)
+        let dayListViewController: DayListViewController = DayListViewController.create(viewModel: dayListViewModel, style: DayListStyle())
+        
+        let jobListViewModel = JobsListViewModel(jobList: dayList.count > 0 ? dayList[0].jobList : [])
+        let jobListViewController: JobsListViewController = JobsListViewController.create(viewModel: jobListViewModel, style: JobListStyle())
+        jobListViewController.dayListComponent = dayListViewController
+        
+        dayListViewModel.didSelectDay.observeNext { jobs in
+            jobListViewModel.updatedJobList(jobList: jobs)
+            }.dispose(in: dayListViewModel.disposeBag)
+        
+        window?.rootViewController = jobListViewController
     }
 }
 

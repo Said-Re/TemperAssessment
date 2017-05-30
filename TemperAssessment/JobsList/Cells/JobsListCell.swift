@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIImageView {
-    func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+    func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit, size: CGSize) {
         contentMode = mode
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
@@ -17,10 +17,19 @@ extension UIImageView {
                 let data = data, error == nil,
                 let image = UIImage(data: data)
                 else { return }
-            DispatchQueue.main.async() { () -> Void in
-                self.image = image
+            DispatchQueue.main.async() {
+                
+                let hasAlpha = false
+                let scale: CGFloat = 0.0
+                
+                UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
+                image.draw(in: CGRect(origin: CGPoint.zero, size: size))
+                
+                let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+                UIGraphicsEndImageContext()
+                self.image = scaledImage
             }
-            }.resume()
+        }.resume()
     }
 }
 
@@ -41,19 +50,9 @@ open class JobsListCell: UICollectionViewCell {
         didSet {
             if let viewModel = viewModel {
                 if let url = URL(string: viewModel.imageUrl) {
-                    //imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-                    //imageView.clipsToBounds = true
-                    //imageView.contentMode = .scaleAspectFit
-                    //imageView.downloadedFrom(url: url)
-                    imageView.backgroundColor = .yellow
                     
-                    //imageView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
-                    //imageView.contentMode = UIViewContentMode.scaleAspectFill
-                    print(frame.width)
-                    print(frame.height)
-                    //print(imageView.image!.size.width)
-                    //print(imageView.image!.size.height)
-                    print("oss")
+                    imageView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height - 80)
+                    imageView.downloadedFrom(url: url, size: CGSize(width: frame.width, height: frame.height - 80))
                 }
                 distanceLabel.text = viewModel.distance
                 nameCompanyLabel.text = viewModel.nameCompany
@@ -101,8 +100,14 @@ open class JobsListCell: UICollectionViewCell {
         addSubview(descriptionJobLabel)
         addSubview(newMatchesCountLabel)
         addSubview(durationLabel)
-        print(frame)
-        backgroundColor = .red
+        backgroundColor = .white
+        
+        layer.shadowColor = UIColor.lightGray.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 2.0)
+        layer.shadowRadius = 2.0
+        layer.shadowOpacity = 1.0
+        layer.masksToBounds = false
+        layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
         
         self.setNeedsUpdateConstraints()
     }
@@ -118,7 +123,6 @@ open class JobsListCell: UICollectionViewCell {
             make.top.equalTo(self.snp.top)
             make.leading.equalTo(self.snp.leading)
             make.trailing.equalTo(self.snp.trailing)
-            //make.width.equalTo(snp.width)
             make.bottom.equalTo(self.snp.bottom).offset(-80)
         }
         
@@ -129,7 +133,7 @@ open class JobsListCell: UICollectionViewCell {
         }
         
         nameCompanyLabel.snp.makeConstraints  { (make) in
-            
+            make.width.equalTo(250)
             make.leading.equalTo(self.snp.leading).offset(15)
             make.bottom.equalTo(self.snp.bottom).offset(-50)
         }
@@ -157,7 +161,6 @@ open class JobsListCell: UICollectionViewCell {
             make.trailing.equalTo(self.snp.trailing).offset(-15)
             make.bottom.equalTo(self.snp.bottom).offset(-10)
         }
-
         
         super.updateConstraints()
     }
@@ -166,5 +169,4 @@ open class JobsListCell: UICollectionViewCell {
         super.prepareForReuse()
         imageView.image = nil
     }
-        
 }

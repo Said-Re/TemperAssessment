@@ -29,13 +29,30 @@ class DayListCell: UICollectionViewCell {
                 backgroundColor = style.cellBackground
             }
         }
-        
+    }
+    
+    open override var isSelected: Bool {
+        get {
+            return super.isSelected
+        }
+        set {
+            
+            if let style = style {
+                if newValue {
+                    dayLabel.textColor = style.dayLabelTextColorSelected
+                    backgroundColor = style.cellBackgroundSelected
+                } else {
+                    dayLabel.textColor = style.dayLabelTextColor
+                    backgroundColor = style.cellBackground
+                }
+            }
+        }
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(dayLabel)
         
+        addSubview(dayLabel)
         setNeedsUpdateConstraints()
     }
     
@@ -54,7 +71,6 @@ class DayListCell: UICollectionViewCell {
     
     override open func layoutSubviews() {
         super.layoutSubviews()
-        backgroundColor = .blue
         
         layer.masksToBounds = true
         self.layer.cornerRadius = 20

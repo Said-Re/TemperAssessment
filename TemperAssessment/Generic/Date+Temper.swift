@@ -32,7 +32,6 @@ public enum WeekDay: Int {
     }
 }
 
-
 public enum MonthNumber: Int {
     
     case january = 1

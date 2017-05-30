@@ -63,28 +63,14 @@ open class JobsListViewController: UIViewController, UICollectionViewDelegate, U
             height: 60
         )
         
-        titleLabel.text = "Werken met plezier."
-        alwaysLabel.text = "Altijd."
-        shiftsNearLabel.text = "Shifts bij jou in de buurt"
-        openPositionsLabel.text = "\(viewModel.numberOfShifts())" + " shifts in " + "\(viewModel.numberOfItemsInSection(0))" + " binnen alle afstanden"
-    
-        collectionView.addSubview(titleLabel)
-        collectionView.addSubview(alwaysLabel)
-        collectionView.addSubview(shiftsNearLabel)
-        collectionView.addSubview(openPositionsLabel)
-        
+        setUpLabels()
         applyStyles()
         applyUIConstraints()
         
         viewModel.didUpdateContent.observeNext { [weak self]  in
             self?.collectionView.reloadData()
             self?.collectionView.contentOffset = CGPoint.zero
-            /*
-            self?.collectionView.scrollToItem(
-                at: IndexPath(item: 0, section: 0),
-                at: UICollectionViewScrollPosition.top,
-                animated: true
-            )*/
+            
             guard let strongSelf = self else {
                 return
             }
@@ -98,33 +84,18 @@ open class JobsListViewController: UIViewController, UICollectionViewDelegate, U
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: UICollectionViewDataSource
-
-    open func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return viewModel.numberOfSections()
-    }
-
-    open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //return viewModel.numberOfItemsInSection(section)
-        return 2
-    }
-
-    open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! JobsListCell
+    open func setUpLabels() {
+        titleLabel.text = "Werken met plezier."
+        alwaysLabel.text = "Altijd."
+        shiftsNearLabel.text = "Shifts bij jou in de buurt"
+        openPositionsLabel.text = "\(viewModel.numberOfShifts())" + " shifts in " + "\(viewModel.numberOfItemsInSection(0))" + " binnen alle afstanden"
         
-        cell.viewModel = viewModel.viewModelForCell(indexPath)
-        cell.style = style.jobListCellStyle
-    
-        // Configure the cell
-    
-        return cell
+        collectionView.addSubview(titleLabel)
+        collectionView.addSubview(alwaysLabel)
+        collectionView.addSubview(shiftsNearLabel)
+        collectionView.addSubview(openPositionsLabel)
     }
     
-    // MARK: UICollectionViewDelegate
-    
-    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
     open func applyStyles() {
         
         titleLabel.textColor = style.titleLabelTextColor
@@ -140,7 +111,6 @@ open class JobsListViewController: UIViewController, UICollectionViewDelegate, U
         openPositionsLabel.font = style.openPositionsLabelFont
     }
     
-    /* Constraints */
     open func applyUIConstraints() {
         
         titleLabel.snp.makeConstraints { (make) in
@@ -162,33 +132,30 @@ open class JobsListViewController: UIViewController, UICollectionViewDelegate, U
             make.top.equalTo(self.shiftsNearLabel.snp.top).offset(35)
             make.leading.equalTo(self.collectionView.snp.leading).offset(20)
         }
+    }
+    
+    // MARK: UICollectionViewDataSource
+
+    open func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return viewModel.numberOfSections()
+    }
+
+    open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.numberOfItemsInSection(section)
+    }
+
+    open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! JobsListCell
         
-        /*
+        cell.viewModel = viewModel.viewModelForCell(indexPath)
+        cell.style = style.jobListCellStyle
+    
+        return cell
+    }
+    
+    // MARK: UICollectionViewDelegate
+    
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        self.atmListView.snp.makeConstraints { (make) in
-            make.bottom.equalTo(self.view.snp.bottom)
-            make.height.equalTo(self.atmListViewExpandedHeight)
-            make.leading.equalTo(self.view.snp.leading)
-            make.trailing.equalTo(self.view.snp.trailing)
-        }
-        self.atmListViewHandle.snp.makeConstraints { (make) in
-            make.centerY.equalTo(self.atmListView.snp.top).offset(atmListViewCollapsedHeight / 2)
-            make.centerX.equalTo(self.atmListView.snp.centerX)
-        }
-        self.mapViewController.view.snp.makeConstraints { (make) in
-            make.bottom.equalTo(self.view.snp.bottom)
-            make.top.equalTo(self.view.snp.top)
-            make.leading.equalTo(self.view.snp.leading)
-            make.trailing.equalTo(self.view.snp.trailing)
-        }
-        self.toolbar.snp.makeConstraints { (make) in
-            
-            make.leading.equalTo(self.view.snp.leading)
-            make.trailing.equalTo(self.view.snp.trailing)
-            make.bottom.equalTo(self.atmListView.snp.top).offset(-10)
-            make.height.equalTo(44)
-            
-        }
- */
     }
 }

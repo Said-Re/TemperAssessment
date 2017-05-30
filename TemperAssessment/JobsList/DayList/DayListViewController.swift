@@ -28,7 +28,6 @@ open class DayListViewController: UIViewController, UICollectionViewDelegate, UI
         layout.scrollDirection = .horizontal
         
         let collectionViewFrame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 60)
-        
 
         layout.headerReferenceSize = CGSize(width: 80, height: 60)
         
@@ -40,6 +39,8 @@ open class DayListViewController: UIViewController, UICollectionViewDelegate, UI
         self.collectionView.register(DayListCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         view.addSubview(collectionView)
+        
+        collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: UICollectionViewScrollPosition.top)
     }
 
     open override func didReceiveMemoryWarning() {
@@ -61,9 +62,10 @@ open class DayListViewController: UIViewController, UICollectionViewDelegate, UI
         
         cell.viewModel = viewModel.viewModelForCell(indexPath)
         cell.style = style.dayListCellStyle
-        
-    
-        // Configure the cell
+        if viewModel.selectedIndex == nil {
+            cell.isSelected = true
+            viewModel.selectedIndex = indexPath
+        }
     
         return cell
     }

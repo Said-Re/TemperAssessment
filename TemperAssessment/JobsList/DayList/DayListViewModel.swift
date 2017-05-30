@@ -27,6 +27,8 @@ open class DayListViewModel: DayListViewModelProtocol {
     open var didSelectDay = PublishSubject1<[JobModel]>()
     open var disposeBag: DisposeBag = DisposeBag()
     
+    open var selectedIndex: IndexPath?
+    
     public init(dayList: [DayModel]) {
         self.dayList = dayList
     }
@@ -41,6 +43,7 @@ open class DayListViewModel: DayListViewModelProtocol {
     
     open func didSelectItemAt(indexPath: IndexPath) {
         didSelectDay.next(dayList[indexPath.row].jobList)
+        selectedIndex = indexPath
     }
     
     open func viewModelForCell(_ indexPath: IndexPath) -> DayListCellViewModelProtocol {
